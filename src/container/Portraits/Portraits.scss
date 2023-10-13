@@ -1,0 +1,43 @@
+// Graduations.scss
+
+.app__works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; // Center the items horizontally
+    gap: 40px; // Increase the gap between photos as needed
+    margin: 0 auto; // Center the content horizontally within the viewport
+    padding: 0 4vw; // Apply a margin of 4vw to the left and right of the content
+}
+
+.app__work-item {
+    flex: 0 0 calc(25% - 40px); // Adjust the width as needed (for a 4-column layout with a 40px gap)
+    max-width: 100%; // Ensure the photo doesn't exceed its container's width
+    margin-bottom: 20px; // Increase the margin to add more space between items
+    position: relative;
+    overflow: hidden;
+
+    .portfolio-image {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        transition: transform 0.25s ease-in-out;
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.25s ease-in-out;
+        color: white;
+        font-size: 16px; // Adjust the font size as needed
+        font-weight: bold;
+    }
+}

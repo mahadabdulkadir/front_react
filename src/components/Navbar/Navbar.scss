@@ -1,0 +1,160 @@
+.app__navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #000;
+    border: none;
+    transition: background 0.3s ease;
+    position: fixed;
+    z-index: 2;
+    height: 70px; /* Set a fixed height for the navbar */
+}
+
+.app__navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.app__navbar-logo img {
+    width: 120px; /* Adjust the width to your desired size */
+    height: 100%; /* Set the height to 100% to maintain the navbar height */
+    filter: brightness(0) invert(1); /* Make the image white */
+    object-fit: contain; /* Maintain aspect ratio and fit within the width */
+}
+
+
+.app__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+
+    li {
+        margin: 0 1rem;
+        cursor: pointer;
+        flex-direction: column;
+        
+        div {
+            width: 10px;
+            height: 10px;
+            background: transparent;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+            flex-direction: column;
+            text-transform: uppercase;
+            font-weight: 500; /* Bolder text */
+            font-size: 1.5rem; /* Larger text */
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
+        
+        &:hover {
+            div {
+                background: var(--secondary-color);
+            }
+        }
+    }
+
+
+
+
+    @media  screen and  (max-width:900px){
+        display: none;
+        
+    }
+}
+
+.app__navbar-menu {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+
+    svg {
+        width: 70%;
+        height: 70%;
+        color: var(--white-color);
+    }
+
+    div{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+        padding: 1rem;
+
+        width: 80%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+
+        background-color: black;
+        background-size: cover;
+        background-repeat: repeat;
+
+        box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+
+        svg {
+            width: 35px;
+            height: 35px;
+            color: var(--secondary-color);
+            margin: 0.5rem 1re,;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        li {
+            margin: 1rem;
+
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-weight: 500;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    color:var(--secondary-color);
+            }
+        }
+        }
+        @media  screen and (min-width: 900px) {
+            display: none;
+            
+        }
+}
+@media  screen and (min-width: 900px) {
+    display: none;
+}
+}

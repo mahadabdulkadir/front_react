@@ -1,0 +1,9 @@
+/* Arthouse.scss */
+ad-text {
+  color: black; // Setting the text color to white
+  text-align: center; // Center aligning the text horizontally
+  display: flex; // Using flexbox for vertical alignment
+  justify-content: center; // Center aligning horizontally using flexbox (redundant but useful if there are child elements)
+  align-items: center; // Center aligning vertically using flexbox
+  height: 100vh; // Taking full viewport height to ensure text is centered vertically
+}

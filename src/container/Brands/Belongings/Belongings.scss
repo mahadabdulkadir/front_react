@@ -1,0 +1,113 @@
+.belongings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh;
+    height: -webkit-fill-available;
+    background-color: black;
+    position: relative;
+}
+
+.logo {
+    width: 15%;  /* Reduced from the initial 20% for a smaller logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 5vh; /* Optional: To move the logo a bit from the top */
+
+    @media screen and (max-width: 768px) {
+        width: 40%; /* Adjust for medium screens */
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 60%; /* Adjust for smaller screens */
+    }
+}
+
+
+/* Styles for the images grid */
+.images-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.app__work-item {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    @media screen and (max-width: 480px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.portfolio-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.25s ease-in-out;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Styles for the video grid */
+.video-grid {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    background-color: black;
+    padding-top: 56.25%; /* 16:9 aspect ratio for the video container */
+}
+
+/* Styles for the video element */
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    /* Adjust logo width for smaller screens */
+    .logo-grid {
+        width: 50%;
+    }
+}
+
+/* Media query for screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    /* Adjust logo width for very small screens */
+    .logo-grid {
+        width: 70%;
+    }
+}

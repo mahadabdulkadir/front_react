@@ -1,0 +1,93 @@
+.app__header {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: row;
+  position: relative;
+  padding: 6rem 2rem 0rem;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 3rem 1rem 0rem;
+  }
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75vh;
+  min-height: 300px; // Add a minimum height
+  z-index: 1;
+
+  .home-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+
+    h1, p {
+      margin: 0;
+      padding: 0;
+      color: wheat;
+      
+      @media screen and (max-width: 768px) {
+        font-size: 0.9em;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    height: auto;
+  }
+}
+
+.storytelling-text {
+  font-size: 6em;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 5%;
+  margin-top: -100px;
+  padding: 1em 0;
+  color: white;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 4em;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 3em;
+    margin-left: 2%;
+  }
+}
+
+.work-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.work-heading {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+}
